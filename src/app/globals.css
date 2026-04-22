@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+}
+
+:root {
+  /* High-end White Workspace */
+  --background: #ffffff;
+  --foreground: #000000;
+  
+  /* The "Dodo" Accent - Use sparingly for max impact */
+  --primary: #c4ff00; 
+  --primary-foreground: #000000;
+  
+  /* Professional Greys for Depth */
+  --secondary: #111111; /* Deep Black for high contrast elements */
+  --accent: #c4ff00;
+  
+  --muted: #f4f4f4; /* Soft background grey */
+  --muted-foreground: #666666; /* Accessible grey for text */
+  --border: #f0f0f0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+/* Claude/Dodo Mixed Stack */
+.serif-heading {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+/* High Contrast Buttons */
+.dodo-btn-primary {
+  @apply px-8 py-4 rounded-xl bg-[#c4ff00] text-black font-black transition-all active:scale-95 hover:bg-[#b2e600] border-2 border-black shadow-[4px_4px_0px_0px_#000000];
+}
+
+.dodo-btn-black {
+  @apply px-8 py-4 rounded-xl bg-black text-white font-black transition-all active:scale-95 hover:bg-[#222222] border-2 border-black shadow-[4px_4px_0px_0px_#c4ff00];
+}
+
+.dodo-card {
+  @apply bg-white border-2 border-black rounded-[2rem] p-8 shadow-[6px_6px_0px_0px_#f0f0f0] transition-all hover:shadow-[6px_6px_0px_0px_#c4ff00];
+}
+
+.input-container {
+  @apply bg-white border-2 border-black rounded-3xl p-2 shadow-[8px_8px_0px_0px_#000000] focus-within:shadow-[8px_8px_0px_0px_#c4ff00] transition-all;
+}
+
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, #f4f4f4 1px, transparent 1px),
+    linear-gradient(to bottom, #f4f4f4 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Smooth active states for sidebar */
+.nav-item-active {
+  @apply bg-[#c4ff00] text-black border-2 border-black shadow-[3px_3px_0px_0px_#000000];
+}
+
+.nav-item-inactive {
+  @apply text-[#666666] hover:bg-[#f4f4f4] hover:text-black border-2 border-transparent;
+}
+
+/* Grain for premium feel */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+}
