@@ -1,8 +1,21 @@
 import { Checkout } from '@dodopayments/nextjs';
+import { NextRequest, NextResponse } from 'next/server';
 
-export const GET = Checkout({
-  bearerToken: process.env.DODO_PAYMENTS_API_KEY!,
-  returnUrl: process.env.RETURN_URL!,
-  environment: "live_mode",
-  type: "static"
+const handler = Checkout({
+  bearerToken: process.env.DODO_PAYMENTS_API_KEY || 'dummy_api_key_build_placeholder',
+  returnUrl: process.env.RETURN_URL || '',
+  environment: (process.env.DODO_PAYMENTS_ENVIRONMENT as 'live_mode' | 'test_mode') || 'live_mode',
+  type: 'static'
 });
+
+export const GET = async (req: NextRequest) => {
+  if (!process.env.DODO_PAYMENTS_API_KEY) {
+    return NextResponse.json(
+      { error: 'DODO_PAYMENTS_API_KEY is not configured in the environment variables.' },
+      { status: 500 }
+    );
+  }
+  return handler(req);
+};
+
+
