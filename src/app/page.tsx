@@ -80,7 +80,7 @@ export default function LandingPage() {
             transition={{ delay: 0.2 }}
             className="flex items-center justify-center gap-6 pt-6"
           >
-            <Link href="/dashboard" className="dodo-btn-primary text-xl px-12">
+            <Link href="/checkout?productId=pdt_0NfAZN8XldtxBygifLbGs&email=creator@ugcbrain.ai&fullName=UGC%20Creator" className="dodo-btn-primary text-xl px-12">
               Start Free Trial
             </Link>
             <Link href="/dashboard" className="text-sm font-black uppercase tracking-[0.2em] underline decoration-[#c4ff00] decoration-4 underline-offset-8 hover:text-[#c4ff00] transition-colors">
