@@ -108,7 +108,7 @@ export default function LandingPage() {
                 <span className="text-[100px] font-black tracking-tighter leading-none">$50</span>
                 <span className="text-2xl text-[#666666] font-bold uppercase">/mo</span>
               </div>
-              <Link href="/dashboard" className="w-full dodo-btn-black text-lg py-6 uppercase tracking-[0.2em]">
+              <Link href="/checkout?productId=pdt_0NfAZN8XldtxBygifLbGs&email=creator@ugcbrain.ai&fullName=UGC%20Creator" className="w-full dodo-btn-black text-lg py-6 uppercase tracking-[0.2em]">
                 Claim My Trial
               </Link>
               <div className="grid grid-cols-2 gap-4 mt-12 text-left">

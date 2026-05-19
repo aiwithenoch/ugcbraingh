@@ -63,9 +63,9 @@ export default function SettingsPage() {
               </div>
            </div>
            <div className="flex flex-col gap-3 min-w-[200px]">
-              <button className="px-6 py-4 rounded-xl bg-white text-black font-black uppercase tracking-widest text-xs hover:bg-[#f4f4f4] transition-all active:scale-95">
+              <a href="/customer-portal?customer_id=cus_0Nf64QHSMFkXzTHR4WAmV" className="px-6 py-4 rounded-xl bg-white text-black font-black uppercase tracking-widest text-xs hover:bg-[#f4f4f4] transition-all active:scale-95 text-center flex items-center justify-center">
                  Manage Billing
-              </button>
+              </a>
               <button className="px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white font-black uppercase tracking-widest text-xs hover:bg-white/20 transition-all active:scale-95">
                  Switch Plan
               </button>
