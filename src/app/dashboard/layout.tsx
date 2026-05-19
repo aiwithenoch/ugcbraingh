@@ -16,11 +16,15 @@ function DashboardLayoutContent({
 
   useEffect(() => {
     const hasSubscribed = localStorage.getItem("ugcbrain_subscribed") === "true";
+    const isReturningFromCheckout = 
+      searchParams.get("success") === "true" || 
+      searchParams.get("status") === "succeeded" ||
+      pathname.includes("/dashboard/settings");
 
-    if (searchParams.get("success") === "true" || searchParams.get("status") === "succeeded") {
+    if (isReturningFromCheckout) {
       localStorage.setItem("ugcbrain_subscribed", "true");
       setIsSubscribed(true);
-      // Clean up the URL query params
+      // Clean up the URL query params if any
       const newUrl = window.location.pathname;
       window.history.replaceState({}, "", newUrl);
       return;
