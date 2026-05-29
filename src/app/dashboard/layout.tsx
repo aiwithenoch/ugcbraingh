@@ -87,7 +87,7 @@ function DashboardLayoutContent({
                   <div className="text-sm font-bold text-black">3-Day Free Trial</div>
                 </div>
                 <div className="text-right">
-                  <span className="text-3xl font-black text-black">$50</span>
+                  <span className="text-3xl font-black text-black">$70</span>
                   <span className="text-xs font-bold text-[#666666]">/mo</span>
                 </div>
               </div>
