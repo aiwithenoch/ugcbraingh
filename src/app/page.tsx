@@ -36,7 +36,7 @@ export default function LandingPage() {
           </div>
 
           <div className="flex items-center gap-4">
-            <Link href="/dashboard" className="px-6 py-2.5 rounded-xl bg-black text-white text-xs font-black uppercase tracking-[0.2em] hover:bg-[#222222] transition-all border-2 border-black shadow-[3px_3px_0px_0px_#c4ff00]">Login</Link>
+            <Link href="/login" className="px-6 py-2.5 rounded-xl bg-black text-white text-xs font-black uppercase tracking-[0.2em] hover:bg-[#222222] transition-all border-2 border-black shadow-[3px_3px_0px_0px_#c4ff00]">Login</Link>
           </div>
         </div>
       </header>
