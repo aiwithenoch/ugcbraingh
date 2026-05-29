@@ -3,16 +3,17 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  LayoutDashboard, 
-  PlusCircle, 
-  FolderKanban, 
-  Sparkles, 
+import {
+  LayoutDashboard,
+  PlusCircle,
+  FolderKanban,
+  Sparkles,
   Settings,
   Zap,
   ChevronRight,
   Menu,
-  X
+  X,
+  Users
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,6 +24,7 @@ const navigation = [
   { name: "Create", href: "/create", icon: PlusCircle },
   { name: "Projects", href: "/projects", icon: FolderKanban },
   { name: "Library", href: "/templates", icon: Sparkles },
+  { name: "Affiliates", href: "/dashboard/affiliates", icon: Users },
   { name: "Settings", href: "/settings", icon: Settings },
 ];
 
@@ -78,7 +80,7 @@ export default function Sidebar() {
             <span className="text-[10px] font-bold text-black tracking-[0.1em] uppercase">Pro Trial</span>
           </div>
           <div className="space-y-1">
-            <div className="text-xl font-black text-black tracking-tighter">$50<span className="text-xs font-medium text-[#999999]">/mo</span></div>
+            <div className="text-xl font-black text-black tracking-tighter">$70<span className="text-xs font-medium text-[#999999]">/mo</span></div>
             <div className="text-[10px] text-[#999999] font-bold uppercase tracking-wider">3 Days Left</div>
           </div>
           <button className="w-full py-3 text-[11px] font-black uppercase tracking-widest text-black bg-[#c4ff00] rounded-xl hover:shadow-lg transition-all active:scale-95">
